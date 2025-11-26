@@ -9,7 +9,7 @@ body{
 #background{
     background-image: url("image/Gemini_Generated_Image_63gwso63gwso63gw.png");
     background-repeat: no-repeat;
-    background-position: top left;
+    background-position: center;
     background-size: auto;
     height: 700px;
 }
@@ -18,8 +18,7 @@ body{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: auto;
-    
+    height: auto; 
 }
 .border-one {
     opacity: 0.9;
