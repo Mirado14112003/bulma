@@ -13,7 +13,15 @@ body{
     background-size: auto;
     height: 700px;
 }
-#border-one {
+#bg1{
+    background-image: url("image/Gemini_Generated_Image_63gwso63gwso63gw.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: auto;
+    
+}
+.border-one {
     opacity: 0.9;
     background-color: #2e4e96;
     height : 60%
