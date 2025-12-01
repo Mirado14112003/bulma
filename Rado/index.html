@@ -10,15 +10,19 @@
 <link rel="stylesheet" href="font/fontawesome-free-5.15.3-web/css/all.min.css">
 </head>
 <body>
-<nav class="navbar is-justify-content-center has-text-centered">
-  <div class="container header-inner">
-    <div class="">
-      <img src="images/logo-magintec.png" class="logo-img" alt="Magintec">
-      <a role="button" class="navbar-burger hamburger" id="hamburger">
-        <span></span><span></span><span></span>
-      </a>
-    </div>
-    <div class="navbar-menu main-nav is-justify-content-center">
+
+<nav class="navbar is-flex-direction-column" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand mb-3">
+    <a class="navbar-item" href="#">
+        <img src="images/logo-magintec.png" class="logo-img" alt="Magintec">
+    </a>
+    <a role="button" class="navbar-burger" id="hamburger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+      <span></span><span></span><span></span>
+    </a>
+  </div>
+  
+  <div id="navbarMenu" class="navbar-menu is-flex-direction-column is-align-items-center">
+    <div class="navbar-start">
       <a class="navbar-item nav-link" href="#">Home</a>
       <a class="navbar-item nav-link" href="#">Véhicules</a>
       <a class="navbar-item nav-link" href="#">Conditions</a>
@@ -26,71 +30,93 @@
     </div>
   </div>
 </nav>
+
 <section class="map-wrap">
   <iframe class="map-iframe" src="https://maps.google.com/maps?q=Magintec%20Sarl%20Weiswampach%20Luxembourg&z=15&output=embed" loading="lazy"></iframe>
 </section>
-<section class="reservation-header">
-  <h1>Location de voitures de sport</h1>
-  <p>Réservation par email: <span>info@maginfec.com</span></p>
+
+<section class="reservation-header has-text-centered mb-5">
+  <h1 class="title is-3">Location de voitures de sport</h1>
+  <p class="subtitle is-5">Réservation par email: <span>info@maginfec.com</span></p>
 </section>
+
 <section class="contact-section">
   <div class="container">
     <div class="columns is-variable is-6">
       <div class="column is-6">
         <div class="card form-card">
           <div class="card-content">
-            <h2 class="form-title">Envoyer un e-mail</h2>
+            <h2 class="title is-4 form-title">Envoyer un e-mail</h2>
             <form>
               <div class="field">
                 <label class="label">Nom <span class="required">*</span></label>
-                <div class="control"><input class="input" placeholder="Votre nom"></div>
+                <div class="control"><input class="input" type="text" placeholder="Votre nom"></div>
               </div>
               <div class="field">
                 <label class="label">E-mail <span class="required">*</span></label>
-                <div class="control"><input class="input" placeholder="adresse@mail.com"></div>
+                <div class="control"><input class="input" type="email" placeholder="adresse@mail.com"></div>
               </div>
               <div class="field">
                 <label class="label">Numéro de téléphone <span class="required">*</span></label>
-                <div class="control"><input class="input" placeholder="+352 ..."></div>
+                <div class="control"><input class="input" type="tel" placeholder="+352 ..."></div>
               </div>
               <div class="field">
                 <label class="label">Message <span class="required">*</span></label>
                 <div class="control"><textarea class="textarea" rows="5" placeholder="Votre message..."></textarea></div>
               </div>
-              <div class="field"><div class="control"><button class="button send-button">Envoyer</button></div></div>
+              <div class="field">
+                  <div class="control">
+                     <button class="button is-primary is-fullwidth send-button" type="submit">Envoyer</button>
+                  </div>
+              </div>
             </form>
           </div>
         </div>
       </div>
-    <div class="column is-4 is-offset-1">
+      
+      <div class="column is-5">
         <aside class="info-panel">
-          <div class="info-block m-6"><i class="fas fa-home info-icon"></i>
-            <h3 class="info-title">Duarrefstross 2</h3><p class="info-text small">9990 Weiswampach (Luxembourg)</p>
+          
+          <div class="info-block mb-5 pb-3">
+              <i class="fas fa-home info-icon"></i>
+              <h3 class="title is-5 info-title">Duarrefstross 2</h3>
+              <p class="subtitle is-6 info-text small">9990 Weiswampach (Luxembourg)</p>
           </div>
-          <div class="info-block m-6"><i class="fas fa-phone info-icon"></i>
-            <h3 class="info-title">Téléphone</h3><p class="info-text small">+352/691.105.854</p>
+          <div class="info-block mb-5 pb-3">
+              <i class="fas fa-phone info-icon"></i>
+              <h3 class="title is-5 info-title">Téléphone</h3>
+              <p class="subtitle is-6 info-text small">+352/691.105.854</p>
           </div>
-          <div class="info-block m-6"><i class="fas fa-envelope info-icon"></i>
-            <h3 class="info-title">Contactez-nous par e-mail</h3><p class="info-text small">info@magintec.com</p>
+          <div class="info-block mb-5 pb-3">
+              <i class="fas fa-envelope info-icon"></i>
+              <h3 class="title is-5 info-title">Contactez-nous par e-mail</h3>
+              <p class="subtitle is-6 info-text small">info@magintec.com</p>
           </div>
         </aside>
       </div>
     </div>
   </div>
 </section>
-<section class="bottom-hero">
-  <div class="hero-inner">
-    <p class="subhead">COMMENT RÉSERVER UNE</p>
-    <h2 class="hero-title">LOCATION DE VOITURE DE SPORT</h2>
-    <p class="hero-desc">Prenez contact par mail à <span class="email-blue">info@magintec.com</span> ou via le formulaire de notre site.</p>
-    <p style="padding-top: 40px;"><button class="button reserve-button">JE RÉSERVE MA VOITURE</button></p>
+
+<section class="hero is-medium bottom-hero">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+        <p class="subhead">COMMENT RÉSERVER UNE</p>
+        <h2 class="title is-2 hero-title">LOCATION DE VOITURE DE SPORT</h2>
+        <p class="subtitle is-4 hero-desc">Prenez contact par mail à <span class="email-blue">info@magintec.com</span> ou via le formulaire de notre site.</p>
+        <p class="pt-5 mt-3">
+            <button class="button is-large is-primary reserve-button">JE RÉSERVE MA VOITURE</button>
+        </p>
+    </div>
   </div>
 </section>
-<footer class="site-footer">
-  <div class="container"><p>Magintec Sarl, Duarrefstross 2, 9990 Weiswampach (Luxembourg) | Conditions générales de vente</p></div>
+
+<footer class="site-footer py-4">
+  <div class="container has-text-centered"><p>Magintec Sarl, Duarrefstross 2, 9990 Weiswampach (Luxembourg) | Conditions générales de vente</p></div>
 </footer>
+
 <script>
-const burger=document.getElementById('hamburger'),menu=document.querySelector('.navbar-menu');
+const burger=document.getElementById('hamburger'),menu=document.getElementById('navbarMenu');
 burger && burger.addEventListener('click',()=>{burger.classList.toggle('is-active');menu.classList.toggle('is-active');});
 </script>
 </body>
