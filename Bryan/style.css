@@ -1,7 +1,8 @@
 body{background-color: #eee;}
     .hero.is-hero-main .hero-body {
-      background-image: url(image1/image8.jpg);
+      background-image: url(image1/image12.jpg);
       background-size: cover;
+      min-width: auto;
       background-color: #9a9494;
       background-blend-mode: multiply;
     }
@@ -77,8 +78,5 @@ body{background-color: #eee;}
       text-decoration: none;
     }
 
-    .navbar-item {
-      font-weight: 600;
-    }
 
 
