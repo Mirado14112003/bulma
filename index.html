@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Magintec - Contact</title>
+<link rel="stylesheet" href="bulma/css/bulma.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="font/fontawesome-free-5.15.3-web/css/all.min.css">
+</head>
+<body>
+<nav class="navbar is-justify-content-center has-text-centered">
+  <div class="container header-inner">
+    <div class="">
+      <img src="images/logo-magintec.png" class="logo-img" alt="Magintec">
+      <a role="button" class="navbar-burger hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </a>
+    </div>
+    <div class="navbar-menu main-nav is-justify-content-center">
+      <a class="navbar-item nav-link" href="#">Home</a>
+      <a class="navbar-item nav-link" href="#">Véhicules</a>
+      <a class="navbar-item nav-link" href="#">Conditions</a>
+      <a class="navbar-item nav-link contact-link" href="#">Contact</a>
+    </div>
+  </div>
+</nav>
+<section class="map-wrap">
+  <iframe class="map-iframe" src="https://maps.google.com/maps?q=Magintec%20Sarl%20Weiswampach%20Luxembourg&z=15&output=embed" loading="lazy"></iframe>
+</section>
+<section class="reservation-header">
+  <h1>Location de voitures de sport</h1>
+  <p>Réservation par email: <span>info@maginfec.com</span></p>
+</section>
+<section class="contact-section">
+  <div class="container">
+    <div class="columns is-variable is-6">
+      <div class="column is-6">
+        <div class="card form-card">
+          <div class="card-content">
+            <h2 class="form-title">Envoyer un e-mail</h2>
+            <form>
+              <div class="field">
+                <label class="label">Nom <span class="required">*</span></label>
+                <div class="control"><input class="input" placeholder="Votre nom"></div>
+              </div>
+              <div class="field">
+                <label class="label">E-mail <span class="required">*</span></label>
+                <div class="control"><input class="input" placeholder="adresse@mail.com"></div>
+              </div>
+              <div class="field">
+                <label class="label">Numéro de téléphone <span class="required">*</span></label>
+                <div class="control"><input class="input" placeholder="+352 ..."></div>
+              </div>
+              <div class="field">
+                <label class="label">Message <span class="required">*</span></label>
+                <div class="control"><textarea class="textarea" rows="5" placeholder="Votre message..."></textarea></div>
+              </div>
+              <div class="field"><div class="control"><button class="button send-button">Envoyer</button></div></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    <div class="column is-4 is-offset-1">
+        <aside class="info-panel">
+          <div class="info-block m-6"><i class="fas fa-home info-icon"></i>
+            <h3 class="info-title">Duarrefstross 2</h3><p class="info-text small">9990 Weiswampach (Luxembourg)</p>
+          </div>
+          <div class="info-block m-6"><i class="fas fa-phone info-icon"></i>
+            <h3 class="info-title">Téléphone</h3><p class="info-text small">+352/691.105.854</p>
+          </div>
+          <div class="info-block m-6"><i class="fas fa-envelope info-icon"></i>
+            <h3 class="info-title">Contactez-nous par e-mail</h3><p class="info-text small">info@magintec.com</p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="bottom-hero">
+  <div class="hero-inner">
+    <p class="subhead">COMMENT RÉSERVER UNE</p>
+    <h2 class="hero-title">LOCATION DE VOITURE DE SPORT</h2>
+    <p class="hero-desc">Prenez contact par mail à <span class="email-blue">info@magintec.com</span> ou via le formulaire de notre site.</p>
+    <p style="padding-top: 40px;"><button class="button reserve-button">JE RÉSERVE MA VOITURE</button></p>
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="container"><p>Magintec Sarl, Duarrefstross 2, 9990 Weiswampach (Luxembourg) | Conditions générales de vente</p></div>
+</footer>
+<script>
+const burger=document.getElementById('hamburger'),menu=document.querySelector('.navbar-menu');
+burger && burger.addEventListener('click',()=>{burger.classList.toggle('is-active');menu.classList.toggle('is-active');});
+</script>
+</body>
+</html>
